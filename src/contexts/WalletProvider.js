@@ -1,4 +1,9 @@
 import { createContext, useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+import { userWallet } from './api';
+
+import { useAuth } from './AuthProvider';
 
 const WalletContext = createContext();
 
@@ -30,10 +35,23 @@ const mockTransactions = [
 export function WalletProvider(props) {
     const [balances, setBalances] = useState(mockBalances);
     const [transactions, setTransactions] = useState(mockTransactions);
+    const { token, logout } = useAuth();
+    const navigate = useNavigate();
+
+    const fetchWallet = async () => {
+        try {
+            await userWallet(token);;
+        } catch (error) {
+            console.log(error.message);
+            const callback = () => navigate('/');
+            logout(callback);
+        }
+    }
 
     const value = {
         balances,
         transactions,
+        fetchWallet,
     };
 
     return (

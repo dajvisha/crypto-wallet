@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import { useWallet } from '../../contexts/WalletProvider';
 import { View } from '../../components/UI';
 
@@ -7,7 +9,15 @@ import Transactions from './Transactions';
 import styles from './styles.module.css';
 
 function Wallet() {
-    const { balances, transactions } = useWallet();
+    const {
+        balances,
+        transactions,
+        fetchWallet,
+    } = useWallet();
+
+    useEffect(() => {
+        fetchWallet();
+    }, []);
 
     return (
         <View>
