@@ -10,10 +10,9 @@ export function AuthProvider(props) {
 
     const login = async (credentials, callback) => {
         try {
-            const response = await userLogin(credentials);
-            const { status, data } = response;
+            const data = await userLogin(credentials);
 
-            if (status === 200) {
+            if (data) {
                 const { access_token } = data;
                 setToken(access_token);
                 callback();

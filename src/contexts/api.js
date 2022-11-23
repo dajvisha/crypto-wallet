@@ -6,7 +6,11 @@ export const userLogin = async (credentials) => {
     try {
         const url = BASE_URL + '/login';
         const response = await axios.post(url, credentials);
-        return response;
+
+        const { status, data } = response;
+        if (status === 200) {
+            return data;
+        }
     } catch (error) {
         const response = error.response;
         const { status } = response;
@@ -22,8 +26,18 @@ export const userLogin = async (credentials) => {
 export const userWallet = async (token) => {
     try {
         const url = BASE_URL + '/wallet';
-        const response = await axios.get(url);
-        console.log(response);
+        const config = {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        };
+
+        const response = await axios.get(url, config);
+        const { status, data } = response;
+
+        if (status === 200) {
+            return data;
+        }
     } catch (error) {
         const response = error.response;
         const { status } = response;

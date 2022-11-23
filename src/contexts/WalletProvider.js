@@ -7,42 +7,22 @@ import { useAuth } from './AuthProvider';
 
 const WalletContext = createContext();
 
-const mockBalances = {
-    "ETH": 0.5297999999889995,
-    "DOGE": 0.0,
-    "BTC": 0.06970000000000004,
-};
-
-const mockTransactions = [
-    {
-        "description": "MyWallet transaction",
-        "amount": 0.05,
-        "currency": "ETH",
-        "sender": "victoria@belvo.com",
-        "receiver": "pablo@belvo.com",
-        "status": "Done"
-    },
-    {
-        "description": "MyWallet transaction",
-        "amount": 0.05,
-        "currency": "ETH",
-        "sender": "victoria@belvo.com",
-        "receiver": "pablo@belvo.com",
-        "status": "Done"
-    },
-];
-
 export function WalletProvider(props) {
-    const [balances, setBalances] = useState(mockBalances);
-    const [transactions, setTransactions] = useState(mockTransactions);
+    const [balances, setBalances] = useState({});
+    const [transactions, setTransactions] = useState([]);
+
     const { token, logout } = useAuth();
     const navigate = useNavigate();
 
     const fetchWallet = async () => {
         try {
-            await userWallet(token);;
+            const data = await userWallet(token);;
+            if (data) {
+                const { balance, transactions } = data;
+                setBalances(balance);
+                setTransactions(transactions);
+            }
         } catch (error) {
-            console.log(error.message);
             const callback = () => navigate('/');
             logout(callback);
         }
