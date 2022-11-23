@@ -1,5 +1,5 @@
 .balances-list {
-    height: 250px;
+    max-height: 250px;
     margin-top: 20px;
     overflow: scroll;
     display: flex;

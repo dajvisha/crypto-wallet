@@ -1,12 +1,16 @@
-import { useState } from 'react';
-
-import { Button, Card } from '../../../components/UI';
+import { Button, Card, Empty } from '../../../components/UI';
 import Transaction from '../../../components/Transaction';
 
 import styles from './styles.module.css';
 
 function Transactions(props) {
     const { transactions } = props;
+
+    const Transactions = () => (
+        transactions.map((transaction, idx) => (
+            <Transaction key={idx} details={transaction} />
+        ))
+    );
 
     return (
         <Card shadow>
@@ -18,11 +22,8 @@ function Transactions(props) {
                         label="New Transaction" />
                 </div>
                 <div className={styles['transactions-list']}>
-                    {
-                        transactions.map((transaction, idx) => (
-                            <Transaction key={idx} details={transaction} />
-                        ))
-                    }
+                    {!transactions.length && <Empty message="You don't have transactions" />}
+                    <Transactions />
                 </div>
             </Card.Body>
         </Card>

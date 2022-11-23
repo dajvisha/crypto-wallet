@@ -5,7 +5,7 @@
 }
 
 .transactions-list {
-    height: 450px;
+    max-height: 400px;
     margin-top: 20px;
     overflow: scroll;
     display: flex;
