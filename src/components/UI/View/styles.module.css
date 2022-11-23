@@ -1,13 +1,14 @@
 .view {
     width: 100vw;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #ebecf0;
 }
 
 .view-body {
-    width: 100vw;
-    height: 100vh;
-    background-color: #ebecf0;
     display: flex;
+    flex: 1 1 auto;
     align-items: center;
     justify-content: center;
 }
