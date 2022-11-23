@@ -7,7 +7,9 @@ function Balances(props) {
     const { balances } = props;
 
     return (
-        <Card className={styles.card}>
+        <Card
+            title="Your Balances"
+            className={styles.card}>
             {
                 Object.entries(balances).map(([currency, amount]) => (
                     <BalanceCard currency={currency} amount={amount} />

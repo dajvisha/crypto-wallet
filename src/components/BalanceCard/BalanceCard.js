@@ -12,8 +12,14 @@ function Balance(props) {
             shadow
             style={generateCardColor()}
             className={styles.card}>
-            <p>{currency}</p>
-            <p>{amount}</p>
+            <div className={styles.row}>
+                <h4>Currency: </h4>
+                <p>{currency}</p>
+            </div>
+            <div className={styles.row}>
+                <h4>Balance: </h4>
+                <p>{amount}</p>
+            </div>
         </Card>
     );
 }
