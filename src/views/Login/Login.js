@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import Button from '../../components/Button';
 import Card from '../../components/Card';
@@ -6,7 +7,8 @@ import Input from '../../components/Input';
 import Logo from '../../components/Logo';
 import Message from '../../components/Message';
 import View from '../../components/View';
-import { login } from '../../auth/api';
+
+import { useAuth } from "../../auth/AuthProvider";
 
 import styles from './styles.module.css';
 
@@ -14,6 +16,8 @@ function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
+    const { login } = useAuth();
+    const navigate = useNavigate();
 
     const onChangeUsername = (e) => {
         setUsername(e.target.value);
@@ -30,7 +34,10 @@ function Login() {
         setErrorMessage('');
 
         try {
-            await login({ username, password });
+            const credentials = { username, password };
+            const callback = () => navigate('/wallet');
+    
+            await login(credentials, callback);
         } catch (error) {
             setErrorMessage(error.message);
         }

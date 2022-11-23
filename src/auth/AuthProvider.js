@@ -1,7 +1,7 @@
 import { createContext, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 import { useLocalStorage } from '../hooks/useLocalStorage';
+import { userLogin } from './api';
 
 const AuthContext = createContext();
 
@@ -10,11 +10,16 @@ export function AuthProvider(props) {
 
     const login = async (credentials, callback) => {
         try {
-            const response = await login(credentials);
-            console.log(response);
-            callback();
+            const response = await userLogin(credentials);
+            const { status, data } = response;
+
+            if (status === 200) {
+                const { access_token } = data;
+                setToken(access_token);
+                callback();
+            }
         } catch (error) {
-            return error;
+            throw error;
         }
     };
 
