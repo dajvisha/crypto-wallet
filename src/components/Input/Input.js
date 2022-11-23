@@ -6,6 +6,8 @@ function Input(props) {
         type,
         label,
         placeholder,
+        value,
+        onChange,
     } = props;
 
     return (
@@ -16,6 +18,8 @@ function Input(props) {
                 type={type}
                 placeholder={placeholder}
                 className={styles.input}
+                value={value}
+                onChange={onChange}
             />
         </div>
     );
