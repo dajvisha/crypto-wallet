@@ -1,9 +1,9 @@
-import UIComponents from './views/UIComponents';
+import Login from './views/Login';
 
 function App() {
   return (
     <div>
-      <UIComponents />
+      <Login />
     </div>
   );
 }
