@@ -4,25 +4,36 @@ import Button from '../../components/Button';
 import Card from '../../components/Card';
 import Input from '../../components/Input';
 import Logo from '../../components/Logo';
+import Message from '../../components/Message';
 import View from '../../components/View';
+import { login } from './api';
 
 import styles from './styles.module.css';
 
 function Login() {
-    const [email, setEmail] = useState('');
+    const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
 
-    const onChangeEmail = (e) => {
-        setEmail(e.target.value);
+    const onChangeUsername = (e) => {
+        setUsername(e.target.value);
+        setErrorMessage('');
     };
 
     const onChangePassword = (e) => {
         setPassword(e.target.value);
+        setErrorMessage('');
     }
 
-    const onSubmit = (e) => {
+    const onSubmit = async (e) => {
         e.preventDefault();
-        console.log({ email, password });
+        setErrorMessage('');
+
+        try {
+            await login({ username, password });
+        } catch (error) {
+            setErrorMessage(error.message);
+        }
     }
 
     return (
@@ -37,11 +48,11 @@ function Login() {
                     <div className={styles['login-content']}>
                         <Input
                             required
-                            type="email"
-                            label="Email address"
-                            placeholder="email@email.com"
-                            value={email}
-                            onChange={onChangeEmail}
+                            type="text"
+                            label="Username"
+                            placeholder="username"
+                            value={username}
+                            onChange={onChangeUsername}
                         />
                         <Input
                             required
@@ -52,6 +63,7 @@ function Login() {
                             onChange={onChangePassword}
                         />
                     </div>
+                    {errorMessage && <Message type="error" message={errorMessage} />}
                     <div className={styles['login-footer']}>
                         <Button
                             type="submit"
