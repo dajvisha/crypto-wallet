@@ -23,6 +23,7 @@ export function AuthProvider(props) {
     };
 
     const logout = (callback) => {
+        console.log('here');
         setToken(null);
         callback();
     };

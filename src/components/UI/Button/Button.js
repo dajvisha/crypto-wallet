@@ -1,12 +1,17 @@
 import styles from './styles.module.css';
 
 function Button(props) {
-    const { type, label } = props;
+    const {
+        type,
+        label,
+        onClick
+    } = props;
 
     return (
         <button
             type={type}
-            className={styles.button}>
+            className={styles.button}
+            onClick={onClick}>
             {label}
         </button>
     );

@@ -11,7 +11,7 @@ function Navbar(props) {
                 <Logo />
             </div>
             <div className={styles['navbar-logout']}>
-                <Button type="button" label="Log out" />
+                <Button type="button" label="Log out" onClick={logout}/>
             </div>
         </div>
     );

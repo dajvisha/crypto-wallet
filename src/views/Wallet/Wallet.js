@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
+import { useAuth } from '../../contexts/AuthProvider';
 import { useWallet } from '../../contexts/WalletProvider';
 import { View } from '../../components/UI';
 
@@ -10,11 +12,18 @@ import styles from './styles.module.css';
 import Navbar from '../../components/Navbar';
 
 function Wallet() {
+    const { logout } = useAuth();
     const {
         balances,
         transactions,
         fetchWallet,
     } = useWallet();
+    const navigate = useNavigate();
+
+    const onLogout = () => {
+        const callback = () => navigate('/');
+        logout(callback);
+    };
 
     useEffect(() => {
         fetchWallet();
@@ -23,7 +32,7 @@ function Wallet() {
     return (
         <View>
             <View.Header>
-                <Navbar />
+                <Navbar logout={onLogout} />
             </View.Header>
             <View.Body>
                 <div className={styles.content}>
