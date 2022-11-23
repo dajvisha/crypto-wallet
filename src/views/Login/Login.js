@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import Button from '../../components/Button';
-import Card from '../../components/Card';
-import Input from '../../components/Input';
-import Logo from '../../components/Logo';
-import Message from '../../components/Message';
-import View from '../../components/View';
-
+import {
+    Button,
+    Card,
+    Input,
+    Logo,
+    Message,
+    View,
+} from '../../components/UI';
 import { useAuth } from "../../auth/AuthProvider";
 
 import styles from './styles.module.css';

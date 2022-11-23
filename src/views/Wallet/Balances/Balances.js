@@ -1,5 +1,4 @@
-import Card from '../../../components/Card';
-
+import { Card } from '../../../components/UI';
 import BalanceCard from '../../../components/BalanceCard';
 
 import styles from './styles.module.css';

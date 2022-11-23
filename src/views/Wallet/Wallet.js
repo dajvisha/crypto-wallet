@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import View from '../../components/View';
+import { View } from '../../components/UI';
 
 import Balances from './Balances';
 import Transactions from './Transactions';
