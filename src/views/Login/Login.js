@@ -6,7 +6,7 @@ import Input from '../../components/Input';
 import Logo from '../../components/Logo';
 import Message from '../../components/Message';
 import View from '../../components/View';
-import { login } from './api';
+import { login } from '../../auth/api';
 
 import styles from './styles.module.css';
 
