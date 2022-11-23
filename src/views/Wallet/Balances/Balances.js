@@ -10,8 +10,11 @@ function Balances(props) {
         <Card className={styles.card}>
             <Card.Title title="Your Balances" />
             {
-                Object.entries(balances).map(([currency, amount]) => (
-                    <Balance currency={currency} amount={amount} />
+                Object.entries(balances).map(([currency, amount], idx) => (
+                    <Balance
+                        key={idx}
+                        currency={currency}
+                        amount={amount} />
                 ))
             }
         </Card>

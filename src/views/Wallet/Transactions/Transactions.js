@@ -18,8 +18,8 @@ function Transactions(props) {
             </div>
             <div className={styles.transactions}>
                 {
-                    transactions.map((transaction) => (
-                        <Transaction details={transaction} />
+                    transactions.map((transaction, idx) => (
+                        <Transaction key={idx} details={transaction} />
                     ))
                 }
             </div>
