@@ -1,0 +1,17 @@
+.login-card {
+    width: 350px;
+}
+
+.login-content {
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.login-footer {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+}
