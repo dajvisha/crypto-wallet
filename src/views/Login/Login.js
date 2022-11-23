@@ -46,41 +46,43 @@ function Login() {
 
     return (
         <View>
-            <View.Body>
-                <Card
-                    shadow
-                    className={styles['login-card']}>
-                    <Logo />
-                    <form
-                        onSubmit={onSubmit}
-                        className={styles['login-form']}>
-                        <div className={styles['login-content']}>
-                            <Input
-                                required
-                                type="text"
-                                label="Username"
-                                placeholder="username"
-                                value={username}
-                                onChange={onChangeUsername}
-                            />
-                            <Input
-                                required
-                                type="password"
-                                label="Password"
-                                placeholder="password"
-                                value={password}
-                                onChange={onChangePassword}
-                            />
-                        </div>
-                        {errorMessage && <Message type="error" message={errorMessage} />}
-                        <div className={styles['login-footer']}>
-                            <Button
-                                type="submit"
-                                label="Log in"
-                            />
-                        </div>
-                    </form>
-                </Card>
+            <View.Body className={styles['view-body']}>
+                <div>
+                    <Card
+                        shadow
+                        className={styles['login-card']}>
+                        <Logo />
+                        <form
+                            onSubmit={onSubmit}
+                            className={styles['login-form']}>
+                            <div className={styles['login-content']}>
+                                <Input
+                                    required
+                                    type="text"
+                                    label="Username"
+                                    placeholder="username"
+                                    value={username}
+                                    onChange={onChangeUsername}
+                                />
+                                <Input
+                                    required
+                                    type="password"
+                                    label="Password"
+                                    placeholder="password"
+                                    value={password}
+                                    onChange={onChangePassword}
+                                />
+                            </div>
+                            {errorMessage && <Message type="error" message={errorMessage} />}
+                            <div className={styles['login-footer']}>
+                                <Button
+                                    type="submit"
+                                    label="Log in"
+                                />
+                            </div>
+                        </form>
+                    </Card>
+                </div>
             </View.Body>
         </View>
     );
