@@ -1,0 +1,12 @@
+.transactions {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.add-transaction {
+    width: 35%;
+    margin-left: auto; 
+    margin-right: 0;
+}
