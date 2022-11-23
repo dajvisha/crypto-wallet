@@ -16,10 +16,10 @@ function Transaction(props) {
     const inlineStyles = getCurrencyStyles(currency);
 
     return (
-        <Card className={styles.transaction}>
+        <Card className={styles.card}>
             <Card.Header
                 style={inlineStyles}
-                className={styles.balance}>
+                className={styles['card-header']}>
                 <div>
                     <Chip text={status} />
                 </div>
@@ -28,10 +28,10 @@ function Transaction(props) {
                     <p>{currency}</p>
                 </div>
             </Card.Header>
-            <Card.Body className={styles.details}>
-                <Card.Row>{sender}</Card.Row>
-                <Card.Row>{receiver}</Card.Row>
-                <Card.Row>{description}</Card.Row>
+            <Card.Body className={styles['card-body']}>
+            <Card.Row label="Sender" value={sender} />
+                <Card.Row label="Receiver" value={receiver} />
+                <Card.Row label="Description" value={description} />
             </Card.Body>
         </Card>
     );

@@ -30,22 +30,19 @@ function Title(props) {
 
 function Body(props) {
     const { className, children } = props;
-    const classNames = `
-        ${className}
-        ${styles['card-body']}
-    `;
 
-    return (
-        <div className={classNames}>
-            {children}
-        </div>
-    );
+    return <div className={className}>{children}</div>;
 }
 
 function Row(props) {
-    const { children } = props;
+    const { label, value } = props;
 
-    return <div>{children}</div>;
+    return (
+        <p>
+            <b>{label}: </b>
+            {value}
+        </p>
+    );
 }
 
 Card.Header = Header;

@@ -1,14 +1,32 @@
 .navbar {
-    height: 60px;
-    padding: 10px 50px;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: center;
     background-color: #ffffff;
 }
 
+.navbar-content {
+    width: 75vw;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+}
+
 .navbar-logout {
-    width: 10%;
+    width: 20%;
     margin-left: auto;
     margin-right: 0;
+}
+
+@media screen and (max-width: 800px) {
+    .navbar-content {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .navbar-logout {
+        width: 100%;
+    }
 }

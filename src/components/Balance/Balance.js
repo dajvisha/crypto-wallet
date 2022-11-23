@@ -10,15 +10,10 @@ function Balance(props) {
 
     return (
         <Card
-            shadow
             style={inlineStyles}
             className={styles.card}>
-            <Card.Row>
-                <p>{amount}</p>
-            </Card.Row>
-            <Card.Row>
-                <p>{currency}</p>
-            </Card.Row>
+            <p>{amount}</p>
+            <p>{currency}</p>
         </Card>
     );
 }

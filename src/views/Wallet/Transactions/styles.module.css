@@ -1,12 +1,20 @@
-.transactions {
+.add-transaction {
+    width: 35%;
+    margin-left: auto; 
+    margin-right: 0;
+}
+
+.transactions-list {
+    height: 450px;
     margin-top: 20px;
+    overflow: scroll;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.add-transaction {
-    width: 35%;
-    margin-left: auto; 
-    margin-right: 0;
+@media screen and (max-width: 700px) {
+    .add-transaction {
+        width: 100%;
+    }
 }

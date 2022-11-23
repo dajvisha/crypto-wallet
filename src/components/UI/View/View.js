@@ -5,7 +5,8 @@ function Header(props) {
 }
 
 function Body(props) {
-    return <div className={styles['view-body']}>{props.children}</div>;
+    const { className, children } = props;
+    return <div className={className}>{children}</div>;
 }
 
 View.Header = Header;

@@ -9,7 +9,7 @@ import Wallet from './views/Wallet';
 
 function App() {
   return (
-    <div>
+    <div style={{ height: '100%'}}>
       <AuthProvider>
         <BrowserRouter>
           <Routes>

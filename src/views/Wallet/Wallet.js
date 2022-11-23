@@ -34,10 +34,14 @@ function Wallet() {
             <View.Header>
                 <Navbar logout={onLogout} />
             </View.Header>
-            <View.Body>
+            <View.Body className={styles['view-body']}>
                 <div className={styles.content}>
-                    <Balances balances={balances} />
-                    <Transactions transactions={transactions} />
+                    <div className={styles.balances}>
+                        <Balances balances={balances} />
+                    </div>
+                    <div className={styles.transactions}>
+                        <Transactions transactions={transactions} />
+                    </div>
                 </div>
             </View.Body>
         </View>
