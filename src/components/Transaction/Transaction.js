@@ -1,7 +1,4 @@
-import {
-    Card,
-    Chip,
-} from '../UI';
+import { Card, Chip } from '../UI';
 
 import { getCurrencyStyles } from '../../helpers/getCurrencyStyles';
 
@@ -16,11 +13,13 @@ function Transaction(props) {
         receiver,
         description,
     } = props.details;
-    const balanceStyles = getCurrencyStyles(currency);
+    const inlineStyles = getCurrencyStyles(currency);
 
     return (
         <Card className={styles.transaction}>
-            <Card.Header style={balanceStyles} className={styles.balance}>
+            <Card.Header
+                style={inlineStyles}
+                className={styles.balance}>
                 <div>
                     <Chip text={status} />
                 </div>

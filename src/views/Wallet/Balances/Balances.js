@@ -1,5 +1,5 @@
 import { Card } from '../../../components/UI';
-import BalanceCard from '../../../components/BalanceCard';
+import Balance from '../../../components/Balance';
 
 import styles from './styles.module.css';
 
@@ -11,7 +11,7 @@ function Balances(props) {
             <Card.Title title="Your Balances" />
             {
                 Object.entries(balances).map(([currency, amount]) => (
-                    <BalanceCard currency={currency} amount={amount} />
+                    <Balance currency={currency} amount={amount} />
                 ))
             }
         </Card>

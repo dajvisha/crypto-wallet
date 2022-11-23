@@ -6,12 +6,12 @@ import styles from './styles.module.css';
 
 function Balance(props) {
     const { currency, amount } = props;
-    const inlineStyle = getCurrencyStyles(currency)
+    const inlineStyles = getCurrencyStyles(currency)
 
     return (
         <Card
             shadow
-            style={inlineStyle}
+            style={inlineStyles}
             className={styles.card}>
             <Card.Row>
                 <p>{amount}</p>

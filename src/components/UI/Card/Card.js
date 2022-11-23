@@ -22,7 +22,9 @@ function Title(props) {
     }
 
     return (
-        <h4 className={styles['card-title']}>{title}</h4>
+        <h4 className={styles['card-title']}>
+            {title}
+        </h4>
     );
 }
 
@@ -34,8 +36,7 @@ function Body(props) {
     `;
 
     return (
-        <div
-            className={classNames}>
+        <div className={classNames}>
             {children}
         </div>
     );
@@ -44,9 +45,7 @@ function Body(props) {
 function Row(props) {
     const { children } = props;
 
-    return (
-        <div>{children}</div>
-    );
+    return <div>{children}</div>;
 }
 
 Card.Header = Header;
@@ -59,7 +58,6 @@ export function Card(props) {
         shadow,
         style,
         className,
-        title,
         children,
     } = props;
 
