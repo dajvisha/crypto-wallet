@@ -1,0 +1,10 @@
+.message {
+    padding: 10px;
+    font-size: .85rem;
+    border-radius: 5px;
+}
+
+.error {
+    color: #fff;
+    background-color: rgba(255, 17, 0, 0.713);
+}
