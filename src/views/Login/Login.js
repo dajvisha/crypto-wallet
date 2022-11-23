@@ -9,7 +9,7 @@ import {
     Message,
     View,
 } from '../../components/UI';
-import { useAuth } from "../../auth/AuthProvider";
+import { useAuth } from "../../contexts/AuthProvider";
 
 import styles from './styles.module.css';
 

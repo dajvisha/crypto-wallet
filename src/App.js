@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { AuthProvider } from "./auth/AuthProvider";
+import { AuthProvider } from "./contexts/AuthProvider";
+import { WalletProvider } from "./contexts/WalletProvider";
 
 import Login from './views/Login';
 import ProtectedView from "./views/ProtectedView";
@@ -17,7 +18,9 @@ function App() {
               path="wallet"
               element={
                 <ProtectedView>
-                  <Wallet />
+                  <WalletProvider>
+                    <Wallet />
+                  </WalletProvider>
                 </ProtectedView>
               }
             />

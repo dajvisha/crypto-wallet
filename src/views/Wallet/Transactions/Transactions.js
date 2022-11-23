@@ -5,27 +5,8 @@ import Transaction from '../../../components/Transaction';
 
 import styles from './styles.module.css';
 
-const transactionsMock = [
-    {
-        "description": "MyWallet transaction",
-        "amount": 0.05,
-        "currency": "ETH",
-        "sender": "victoria@belvo.com",
-        "receiver": "pablo@belvo.com",
-        "status": "Done"
-    },
-    {
-        "description": "MyWallet transaction",
-        "amount": 0.05,
-        "currency": "ETH",
-        "sender": "victoria@belvo.com",
-        "receiver": "pablo@belvo.com",
-        "status": "Done"
-    },
-];
-
-function Transactions() {
-    const [transactions, setTransactions] = useState(transactionsMock);
+function Transactions(props) {
+    const { transactions } = props;
 
     return (
         <Card shadow>

@@ -1,6 +1,6 @@
 import { Navigate } from 'react-router-dom';
 
-import { useAuth } from "../../auth/AuthProvider";
+import { useAuth } from "../../contexts/AuthProvider";
 
 function ProtectedView(props) {
     const { token } = useAuth();
