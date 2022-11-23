@@ -1,0 +1,14 @@
+.navbar {
+    height: 60px;
+    padding: 10px 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.navbar-logout {
+    width: 10%;
+    margin-left: auto;
+    margin-right: 0;
+}

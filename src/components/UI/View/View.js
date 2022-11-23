@@ -1,13 +1,21 @@
 import styles from './styles.module.css';
 
-function View(props) {
-    const { children } = props;
+function Header(props) {
+    return <div>{props.children}</div>;
+}
 
+function Body(props) {
+    return <div className={styles['view-body']}>{props.children}</div>;
+}
+
+View.Header = Header;
+View.Body = Body;
+
+export function View(props) {
     return (
         <div className={styles.view}>
-            { children }
+            {props.children}
         </div>
     );
 }
 
-export default View;
