@@ -5,13 +5,21 @@
     border-radius: 10px;
 }
 
-.shadow {
+.card-shadow {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.title {
+.card-header {
+    padding: 10px;
+}
+
+.card-title {
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 10px;
     border-bottom: .01rem solid #111727;
+}
+
+.card-body {
+    padding: 10px;
 }
