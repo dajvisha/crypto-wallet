@@ -1,0 +1,11 @@
+.card {
+    padding: 15px;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.card-shadow {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
