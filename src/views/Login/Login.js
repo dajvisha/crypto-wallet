@@ -6,7 +6,6 @@ import {
     Card,
     Input,
     Logo,
-    Message,
     View,
 } from '../../components/UI';
 import { useAuth } from "../../contexts/AuthProvider";
@@ -16,23 +15,19 @@ import styles from './styles.module.css';
 function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');
     const { login } = useAuth();
     const navigate = useNavigate();
 
     const onChangeUsername = (e) => {
         setUsername(e.target.value);
-        setErrorMessage('');
     };
 
     const onChangePassword = (e) => {
         setPassword(e.target.value);
-        setErrorMessage('');
     }
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        setErrorMessage('');
 
         try {
             const credentials = { username, password };
@@ -40,7 +35,7 @@ function Login() {
 
             await login(credentials, callback);
         } catch (error) {
-            setErrorMessage(error.message);
+            console.log(error);
         }
     }
 
@@ -73,7 +68,6 @@ function Login() {
                                     onChange={onChangePassword}
                                 />
                             </div>
-                            {errorMessage && <Message type="error" message={errorMessage} />}
                             <div className={styles['login-footer']}>
                                 <Button
                                     type="submit"

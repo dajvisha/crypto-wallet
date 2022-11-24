@@ -2,11 +2,13 @@ import { createContext, useContext } from 'react';
 
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import { userLogin } from './api';
+import { useMessage } from './MessagesProvider';
 
 const AuthContext = createContext();
 
 export function AuthProvider(props) {
     const [token, setToken] = useLocalStorage('token', null);
+    const { addMessage, removeMessage } = useMessage();
 
     const login = async (credentials, callback) => {
         try {
@@ -14,16 +16,16 @@ export function AuthProvider(props) {
 
             if (data) {
                 const { access_token } = data;
+                removeMessage();
                 setToken(access_token);
                 callback();
             }
         } catch (error) {
-            throw error;
+            addMessage('error', error.message);
         }
     };
 
     const logout = (callback) => {
-        console.log('here');
         setToken(null);
         callback();
     };
