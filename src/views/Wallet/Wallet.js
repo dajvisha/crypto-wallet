@@ -11,6 +11,8 @@ import Transactions from './Transactions';
 import styles from './styles.module.css';
 import Navbar from '../../components/Navbar';
 
+import useIdle from './../../hooks/useIdle';
+
 function Wallet() {
   const { logout } = useAuth();
   const { balances, transactions, fetchWallet } = useWallet();
@@ -20,6 +22,8 @@ function Wallet() {
     const callback = () => navigate('/');
     logout(callback);
   };
+
+  useIdle();
 
   useEffect(() => {
     fetchWallet();
