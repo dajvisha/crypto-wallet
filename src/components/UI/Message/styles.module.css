@@ -2,8 +2,8 @@
   padding: 10px;
   margin: 50px;
   bottom: 0;
-  right: 0;
-  font-size: 0.85rem;
+  left: 0;
+  font-size: 0.9rem;
   border-radius: 5px;
   position: absolute;
   z-index: 2;
@@ -19,5 +19,11 @@
 }
 
 .success {
+  color: #fff;
   background-color: rgba(27, 222, 56, 0.713);
+}
+
+.default {
+  color: #fff;
+  background-color: #111727a1;
 }

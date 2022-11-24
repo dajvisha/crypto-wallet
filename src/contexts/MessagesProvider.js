@@ -7,8 +7,8 @@ const MessagesContext = createContext();
 export function MessagesProvider(props) {
   const [message, setMessage] = useLocalStorage('message', null);
 
-  const addMessage = (type, message) => {
-    setMessage({ type, message });
+  const addMessage = (type, message, stick = false) => {
+    setMessage({ type, message, stick });
   };
 
   const removeMessage = () => {

@@ -8,10 +8,10 @@ function MessagesView() {
   const { message, removeMessage } = useMessages();
 
   useEffect(() => {
-    if (message) {
+    if (message && !message.stick) {
       const timer = setTimeout(() => {
         removeMessage();
-      }, 3000);
+      }, 5000);
 
       return () => clearTimeout(timer);
     }
