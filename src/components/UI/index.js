@@ -5,6 +5,7 @@ import Empty from './Empty';
 import Input from './Input';
 import Logo from './Logo';
 import Message from './Message';
+import Modal from './Modal';
 import View from './View';
 
-export { Button, Card, Chip, Empty, Input, Logo, Message, View };
+export { Button, Card, Chip, Empty, Input, Logo, Message, Modal, View };
