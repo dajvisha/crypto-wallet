@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { Button, Card, Input, Logo, View } from '../../components/UI';
@@ -9,7 +9,7 @@ import styles from './styles.module.css';
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const { login } = useAuth();
+  const { token, login } = useAuth();
   const navigate = useNavigate();
 
   const onChangeUsername = (e) => {
@@ -32,6 +32,12 @@ function Login() {
       console.log(error);
     }
   };
+
+  useEffect(() => {
+    if (token) {
+      navigate('/wallet');
+    }
+  }, [token]);
 
   return (
     <View>
