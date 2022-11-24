@@ -11,6 +11,8 @@ npm install
 npm start
 ```
 
+> We don't need to set up `ENV` variables. The endpoint URL is attached to the `api.js` for simplicity. In production, it should moved to a `ENV` varibles.
+
 ## Project overview
 
 ### App images
