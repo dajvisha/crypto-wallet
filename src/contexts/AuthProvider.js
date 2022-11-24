@@ -16,8 +16,8 @@ export function AuthProvider(props) {
 
             if (data) {
                 const { access_token } = data;
-                removeMessage();
                 setToken(access_token);
+                removeMessage();
                 callback();
             }
         } catch (error) {
