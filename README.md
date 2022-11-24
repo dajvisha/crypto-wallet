@@ -15,6 +15,8 @@ npm start
 
 ## Project overview
 
+> The APP has an idle of 15 sec, if not user activity is registered the account is closed.
+
 ### App images
 
 **Login View**:
