@@ -1,3 +1,0 @@
-# CryptoWallet
-
-A crypto wallet
