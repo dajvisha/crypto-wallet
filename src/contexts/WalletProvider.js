@@ -13,12 +13,12 @@ export function WalletProvider(props) {
   const [transactions, setTransactions] = useState([]);
   const [contacts, setContacts] = useState([]);
   const { addMessage } = useMessages();
-  const { token, logout } = useAuth();
+  const { getToken, logout } = useAuth();
   const navigate = useNavigate();
 
   const fetchWallet = async () => {
     try {
-      const data = await userWallet(token);
+      const data = await userWallet(getToken());
       if (data) {
         const { balance, transactions } = data;
         setBalances(balance);
@@ -33,7 +33,7 @@ export function WalletProvider(props) {
 
   const fetchContacts = async () => {
     try {
-      const data = await userContacts(token);
+      const data = await userContacts(getToken());
       if (data) {
         const contacts = data.map((contact) => ({
           label: `${contact.name} (${contact.email})`,
@@ -48,7 +48,7 @@ export function WalletProvider(props) {
 
   const sendWalletTransaction = async (transaction) => {
     try {
-      const data = await sendTransaction(transaction, token);
+      const data = await sendTransaction(transaction, getToken());
       if (data) {
         fetchWallet();
         addMessage('success', '💸 You successfully made a transfer.');

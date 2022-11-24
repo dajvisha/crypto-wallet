@@ -9,7 +9,7 @@ import styles from './styles.module.css';
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const { token, login } = useAuth();
+  const { getToken, login } = useAuth();
   const navigate = useNavigate();
 
   const onChangeUsername = (e) => {
@@ -34,10 +34,10 @@ function Login() {
   };
 
   useEffect(() => {
-    if (token) {
+    if (getToken()) {
       navigate('/wallet');
     }
-  }, [token, navigate]);
+  }, [getToken, navigate]);
 
   return (
     <View>

@@ -7,8 +7,17 @@ import { useMessages } from './MessagesProvider';
 const AuthContext = createContext();
 
 export function AuthProvider(props) {
-  const [token, setToken] = useLocalStorage('token', null);
+  const [_token, setToken] = useLocalStorage('token', null);
   const { addMessage, removeMessage } = useMessages();
+
+  const getToken = () => {
+    try {
+      const item = window.localStorage.getItem('token');
+      return item ? JSON.parse(item) : null;
+    } catch (error) {
+      return null;
+    }
+  };
 
   const login = async (credentials, callback) => {
     try {
@@ -32,7 +41,7 @@ export function AuthProvider(props) {
   };
 
   const value = {
-    token,
+    getToken,
     login,
     logout
   };
