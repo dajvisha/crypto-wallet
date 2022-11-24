@@ -15,7 +15,7 @@ npm start
 
 ### App images
 
-<img src="https://drive.google.com/file/d/1ZYIFBcz6z7NaUWvawK7K67vMr8Oz_M4m/view?usp=share_link" alt="MarineGEO circle logo" style="height: 100px; width:100px;"/>
+<img src="https://drive.google.com/uc?id=1ZYIFBcz6z7NaUWvawK7K67vMr8Oz_M4m" alt="MarineGEO circle logo" style="height: 100px; width:100px;"/>
 
 
 ### App videos
