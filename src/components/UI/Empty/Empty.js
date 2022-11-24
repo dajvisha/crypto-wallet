@@ -7,7 +7,7 @@ function Empty(props) {
     
     return (
         <div className={styles.empty}>
-            <img className={styles.icon} src={icon} />
+            <img className={styles.icon} alt="empty" src={icon} />
             <p>{message}</p>
         </div>
     );

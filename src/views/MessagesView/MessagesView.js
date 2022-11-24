@@ -15,7 +15,7 @@ function MessagesView() {
 
             return () => clearTimeout(timer);
         }
-    }, [message]);
+    }, [message, removeMessage]);
 
     if (!message) {
         return null;

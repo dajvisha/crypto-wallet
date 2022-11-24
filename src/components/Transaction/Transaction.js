@@ -29,7 +29,7 @@ function Transaction(props) {
                 </div>
             </Card.Header>
             <Card.Body className={styles['card-body']}>
-            <Card.Row label="Sender" value={sender} />
+                <Card.Row label="Sender" value={sender} />
                 <Card.Row label="Receiver" value={receiver} />
                 <Card.Row label="Description" value={description} />
             </Card.Body>
