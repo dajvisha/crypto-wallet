@@ -1,18 +1,20 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { AuthProvider } from './contexts/AuthProvider';
-import { MessageProvider } from './contexts/MessagesProvider';
+import { MessagesProvider } from './contexts/MessagesProvider';
 import { WalletProvider } from './contexts/WalletProvider';
 
 import Login from './views/Login';
 import MessagesView from './views/MessagesView';
 import ProtectedView from './views/ProtectedView';
 import Wallet from './views/Wallet';
+import NewTransaction from './components/NewTransaction';
 
 function App() {
   return (
-    <MessageProvider>
+    <MessagesProvider>
       <MessagesView />
+      <NewTransaction />
       <AuthProvider>
         <BrowserRouter>
           <Routes>
@@ -30,7 +32,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </AuthProvider>
-    </MessageProvider>
+    </MessagesProvider>
   );
 }
 

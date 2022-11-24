@@ -10,7 +10,7 @@ export default function useIdle() {
   const { logout } = useAuth();
   const { addMessage } = useMessages();
   const navigate = useNavigate();
-  
+
   const onIdle = () => {
     const callback = () => navigate('/');
     logout(callback);

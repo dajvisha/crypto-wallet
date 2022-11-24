@@ -1,10 +1,10 @@
 .modal {
-    position: absolute;
-    min-height: 100vh;
-    min-width: 100vw;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.318);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  min-height: 100vh;
+  min-width: 100vw;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.318);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
