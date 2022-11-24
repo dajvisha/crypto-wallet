@@ -39,9 +39,11 @@ npm start
 ### App videos
 
 **Security Log out**:
+
 https://user-images.githubusercontent.com/6569241/203859438-3ffc30e7-5e75-468f-bc49-ab5f03926c75.mov
 
 **Security No Activity after N seconds**:
+
 https://user-images.githubusercontent.com/6569241/203859985-c8331f99-df4f-4f10-aed3-57e0b58cde94.mov
 
 
