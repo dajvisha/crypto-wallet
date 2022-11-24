@@ -16,10 +16,10 @@ export const userLogin = async (credentials) => {
     const { status } = response;
 
     if (status === 401) {
-      throw new Error("You can't access to your account. Validate your credentials.");
+      throw new Error("🚨 You can't access to your account. Validate your credentials.");
     }
 
-    throw new Error('There was an error processing your request.');
+    throw new Error('😥 There was an error processing your request.');
   }
 };
 
@@ -43,10 +43,10 @@ export const userWallet = async (token) => {
     const { status } = response;
 
     if (status === 401) {
-      throw new Error('Your session has expired. Log in again.');
+      throw new Error('👀 Your session has expired. Log in again.');
     }
 
-    throw new Error('There was an error processing your request.');
+    throw new Error('😥 There was an error processing your request.');
   }
 };
 
@@ -70,10 +70,10 @@ export const userContacts = async (token) => {
     const { status } = response;
 
     if (status === 401) {
-      throw new Error('Your session has expired. Log in again.');
+      throw new Error('👀 Your session has expired. Log in again.');
     }
 
-    throw new Error('There was an error processing your request.');
+    throw new Error('😥 There was an error processing your request.');
   }
 };
 
@@ -93,6 +93,6 @@ export const sendTransaction = async (transaction, token) => {
       return data;
     }
   } catch (error) {
-    throw new Error('There was an error processing your request.');
+    throw new Error('😥 There was an error processing your request.');
   }
 };

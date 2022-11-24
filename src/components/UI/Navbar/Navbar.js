@@ -1,4 +1,4 @@
-import { Button, Logo } from '../UI';
+import { Button, Logo } from '../';
 
 import styles from './styles.module.css';
 

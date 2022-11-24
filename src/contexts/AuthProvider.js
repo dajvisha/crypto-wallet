@@ -27,7 +27,7 @@ export function AuthProvider(props) {
 
   const logout = (callback) => {
     setToken(null);
-    addMessage('default', '👋 have a nice day!');
+    addMessage('default', '👋 Have a nice day!');
     callback();
   };
 

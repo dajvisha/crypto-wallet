@@ -51,7 +51,7 @@ export function WalletProvider(props) {
       const data = await sendTransaction(transaction, token);
       if (data) {
         fetchWallet();
-        addMessage('success', 'You successfully made a transfer.');
+        addMessage('success', '💸 You successfully made a transfer.');
         return true;
       }
 
