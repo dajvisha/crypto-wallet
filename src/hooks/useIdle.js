@@ -31,7 +31,7 @@ export default function useIdle() {
   };
 
   useIdleTimer({
-    timeout: 30000,
+    timeout: 15000,
     debounce: 500,
     onIdle: handleOnIdle,
     onActive: handleOnActive,
