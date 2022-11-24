@@ -12,3 +12,11 @@
   color: #fff;
   background-color: rgba(255, 17, 0, 0.713);
 }
+
+.info {
+  background-color: rgba(222, 183, 27, 0.713);
+}
+
+.success {
+  background-color: rgba(27, 222, 56, 0.713);
+}

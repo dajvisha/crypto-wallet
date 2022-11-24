@@ -14,7 +14,7 @@ export default function useIdle() {
   const onIdle = () => {
     const callback = () => navigate('/');
     logout(callback);
-    addMessage('error', 'Logged out due to inactivity.');
+    addMessage('info', 'Logged out due to inactivity.');
   };
 
   const handleOnIdle = () => {
