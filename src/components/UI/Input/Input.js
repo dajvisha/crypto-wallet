@@ -1,7 +1,7 @@
 import styles from './styles.module.css';
 
 function Input(props) {
-  const { required, type, label, placeholder, value, onChange } = props;
+  const { required, type, label, placeholder, value, min, max, onChange } = props;
 
   return (
     <div>
@@ -12,6 +12,8 @@ function Input(props) {
         placeholder={placeholder}
         className={styles.input}
         value={value}
+        min={min}
+        max={max}
         onChange={onChange}
       />
     </div>

@@ -37,7 +37,7 @@ function Login() {
     if (token) {
       navigate('/wallet');
     }
-  }, [token]);
+  }, [token, navigate]);
 
   return (
     <View>

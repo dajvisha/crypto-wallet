@@ -49,3 +49,50 @@ export const userWallet = async (token) => {
     throw new Error('There was an error processing your request.');
   }
 };
+
+export const userContacts = async (token) => {
+  try {
+    const url = BASE_URL + '/contacts';
+    const config = {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    };
+
+    const response = await axios.get(url, config);
+    const { status, data } = response;
+
+    if (status === 200) {
+      return data;
+    }
+  } catch (error) {
+    const response = error.response;
+    const { status } = response;
+
+    if (status === 401) {
+      throw new Error('Your session has expired. Log in again.');
+    }
+
+    throw new Error('There was an error processing your request.');
+  }
+};
+
+export const sendTransaction = async (transaction, token) => {
+  try {
+    const url = BASE_URL + '/wallet/send';
+    const config = {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    };
+
+    const response = await axios.post(url, transaction, config);
+    const { status, data } = response;
+
+    if (status === 200) {
+      return data;
+    }
+  } catch (error) {
+    throw new Error('There was an error processing your request.');
+  }
+};

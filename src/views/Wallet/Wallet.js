@@ -27,7 +27,7 @@ function Wallet() {
 
   useEffect(() => {
     fetchWallet();
-  }, [fetchWallet]);
+  }, []);
 
   return (
     <View>

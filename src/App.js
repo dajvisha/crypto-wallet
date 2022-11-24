@@ -8,13 +8,11 @@ import Login from './views/Login';
 import MessagesView from './views/MessagesView';
 import ProtectedView from './views/ProtectedView';
 import Wallet from './views/Wallet';
-import NewTransaction from './components/NewTransaction';
 
 function App() {
   return (
     <MessagesProvider>
       <MessagesView />
-      <NewTransaction />
       <AuthProvider>
         <BrowserRouter>
           <Routes>
@@ -24,6 +22,7 @@ function App() {
               element={
                 <ProtectedView>
                   <WalletProvider>
+                    <div id="modal" />
                     <Wallet />
                   </WalletProvider>
                 </ProtectedView>

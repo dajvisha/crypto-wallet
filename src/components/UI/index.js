@@ -6,6 +6,7 @@ import Input from './Input';
 import Logo from './Logo';
 import Message from './Message';
 import Modal from './Modal';
+import Select from './Select';
 import View from './View';
 
-export { Button, Card, Chip, Empty, Input, Logo, Message, Modal, View };
+export { Button, Card, Chip, Empty, Input, Logo, Message, Modal, Select, View };

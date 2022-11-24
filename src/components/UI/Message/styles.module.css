@@ -6,6 +6,7 @@
   font-size: 0.85rem;
   border-radius: 5px;
   position: absolute;
+  z-index: 2;
 }
 
 .error {
