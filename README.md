@@ -38,13 +38,18 @@ npm start
 
 ### App videos
 
-**Security Log out**:
+**App**:
+
+https://user-images.githubusercontent.com/6569241/203860494-cd66ffd0-4629-4cb0-b111-ba368a90fca3.mov
+
+**App - Responsive View**:
+
+https://user-images.githubusercontent.com/6569241/203860344-d47dda5a-e3c9-4804-b0b4-c96639cb2d1c.mov
+
+**Security - Log out**:
 
 https://user-images.githubusercontent.com/6569241/203859438-3ffc30e7-5e75-468f-bc49-ab5f03926c75.mov
 
-**Security No Activity after N seconds**:
+**Security - No Activity after N seconds**:
 
 https://user-images.githubusercontent.com/6569241/203859985-c8331f99-df4f-4f10-aed3-57e0b58cde94.mov
-
-
-
