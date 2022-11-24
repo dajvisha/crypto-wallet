@@ -12,40 +12,36 @@ import styles from './styles.module.css';
 import Navbar from '../../components/Navbar';
 
 function Wallet() {
-    const { logout } = useAuth();
-    const {
-        balances,
-        transactions,
-        fetchWallet,
-    } = useWallet();
-    const navigate = useNavigate();
+  const { logout } = useAuth();
+  const { balances, transactions, fetchWallet } = useWallet();
+  const navigate = useNavigate();
 
-    const onLogout = () => {
-        const callback = () => navigate('/');
-        logout(callback);
-    };
+  const onLogout = () => {
+    const callback = () => navigate('/');
+    logout(callback);
+  };
 
-    useEffect(() => {
-        fetchWallet();
-    }, [fetchWallet]);
+  useEffect(() => {
+    fetchWallet();
+  }, [fetchWallet]);
 
-    return (
-        <View>
-            <View.Header>
-                <Navbar logout={onLogout} />
-            </View.Header>
-            <View.Body className={styles['view-body']}>
-                <div className={styles.content}>
-                    <div className={styles.balances}>
-                        <Balances balances={balances} />
-                    </div>
-                    <div className={styles.transactions}>
-                        <Transactions transactions={transactions} />
-                    </div>
-                </div>
-            </View.Body>
-        </View>
-    );
+  return (
+    <View>
+      <View.Header>
+        <Navbar logout={onLogout} />
+      </View.Header>
+      <View.Body className={styles['view-body']}>
+        <div className={styles.content}>
+          <div className={styles.balances}>
+            <Balances balances={balances} />
+          </div>
+          <div className={styles.transactions}>
+            <Transactions transactions={transactions} />
+          </div>
+        </div>
+      </View.Body>
+    </View>
+  );
 }
 
 export default Wallet;

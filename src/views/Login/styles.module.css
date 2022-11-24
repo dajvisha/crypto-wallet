@@ -1,25 +1,25 @@
 .view-body {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .login-card {
-    width: 350px;
+  width: 350px;
 }
 
 .login-content {
-    height: 240px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 15px;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
 }
 
 .login-footer {
-    height: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

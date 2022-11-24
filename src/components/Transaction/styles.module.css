@@ -1,43 +1,43 @@
 .card {
-    padding: 0 !important;
-    display: flex;
-    flex-direction: column;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-header {
-    display: flex;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+  display: flex;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
-.card-header>div:first-child {
-    width: 20%;
+.card-header > div:first-child {
+  width: 20%;
 }
 
-.card-header>div:last-child {
-    width: 80%;
-    text-align: right;
+.card-header > div:last-child {
+  width: 80%;
+  text-align: right;
 }
 
 .card-body {
-    padding: 10px;
-    border: 0.1px solid #303132;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+  padding: 10px;
+  border: 0.1px solid #303132;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 @media screen and (max-width: 700px) {
-    .card-header {
-        flex-direction: column;
-    }
+  .card-header {
+    flex-direction: column;
+  }
 
-    .card-header>div:first-child {
-        width: 100%;
-        text-align: right;
-        padding-bottom: 10px;
-    }
+  .card-header > div:first-child {
+    width: 100%;
+    text-align: right;
+    padding-bottom: 10px;
+  }
 
-    .card-header>div:last-child {
-        width: 100%;
-    }
+  .card-header > div:last-child {
+    width: 100%;
+  }
 }

@@ -1,8 +1,8 @@
 .balances-list {
-    max-height: 250px;
-    margin-top: 20px;
-    overflow: scroll;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  max-height: 250px;
+  margin-top: 20px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }

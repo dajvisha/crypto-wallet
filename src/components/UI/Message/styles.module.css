@@ -1,14 +1,14 @@
 .message {
-    padding: 10px;
-    margin: 50px;
-    bottom: 0;
-    right: 0;
-    font-size: .85rem;
-    border-radius: 5px;
-    position: absolute;
+  padding: 10px;
+  margin: 50px;
+  bottom: 0;
+  right: 0;
+  font-size: 0.85rem;
+  border-radius: 5px;
+  position: absolute;
 }
 
 .error {
-    color: #fff;
-    background-color: rgba(255, 17, 0, 0.713);
+  color: #fff;
+  background-color: rgba(255, 17, 0, 0.713);
 }

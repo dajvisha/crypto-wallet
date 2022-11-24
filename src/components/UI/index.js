@@ -7,13 +7,4 @@ import Logo from './Logo';
 import Message from './Message';
 import View from './View';
 
-export {
-    Button,
-    Card,
-    Chip,
-    Empty,
-    Input,
-    Logo,
-    Message,
-    View,
-};
+export { Button, Card, Chip, Empty, Input, Logo, Message, View };
