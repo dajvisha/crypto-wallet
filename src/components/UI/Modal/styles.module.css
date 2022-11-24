@@ -1,5 +1,5 @@
 .modal {
-  position: absolute;
+  position: fixed;
   min-height: 100vh;
   min-width: 100vw;
   z-index: 1;
