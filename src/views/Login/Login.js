@@ -29,7 +29,7 @@ function Login() {
 
       await login(credentials, callback);
     } catch (error) {
-      console.log(error);
+      return;
     }
   };
 

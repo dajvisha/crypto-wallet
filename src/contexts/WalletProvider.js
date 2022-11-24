@@ -13,7 +13,6 @@ export function WalletProvider(props) {
   const [transactions, setTransactions] = useState([]);
   const [contacts, setContacts] = useState([]);
   const { addMessage } = useMessages();
-
   const { token, logout } = useAuth();
   const navigate = useNavigate();
 

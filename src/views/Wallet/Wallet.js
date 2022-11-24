@@ -1,17 +1,15 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import { Navbar, View } from '../../components/UI';
 import { useAuth } from '../../contexts/AuthProvider';
 import { useWallet } from '../../contexts/WalletProvider';
-import { View } from '../../components/UI';
+import useIdle from './../../hooks/useIdle';
 
 import Balances from './Balances';
 import Transactions from './Transactions';
 
 import styles from './styles.module.css';
-import Navbar from '../../components/Navbar';
-
-import useIdle from './../../hooks/useIdle';
 
 function Wallet() {
   const { logout } = useAuth();

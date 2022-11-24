@@ -1,14 +1,13 @@
 import { useEffect } from 'react';
 
-import { useMessages } from '../../contexts/MessagesProvider';
-
 import { Message } from '../../components/UI';
+import { useMessages } from '../../contexts/MessagesProvider';
 
 function MessagesView() {
   const { message, removeMessage } = useMessages();
 
   useEffect(() => {
-    if (message && !message.stick) {
+    if (message && !message.sticky) {
       const timer = setTimeout(() => {
         removeMessage();
       }, 5000);
