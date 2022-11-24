@@ -2,9 +2,9 @@ import { createContext, useContext } from 'react';
 
 import { useLocalStorage } from '../hooks/useLocalStorage';
 
-const MessageContext = createContext();
+const MessagesContext = createContext();
 
-export function MessageProvider(props) {
+export function MessagesProvider(props) {
   const [message, setMessage] = useLocalStorage('message', null);
 
   const addMessage = (type, message) => {
@@ -21,9 +21,9 @@ export function MessageProvider(props) {
     removeMessage
   };
 
-  return <MessageContext.Provider value={value}>{props.children}</MessageContext.Provider>;
+  return <MessagesContext.Provider value={value}>{props.children}</MessagesContext.Provider>;
 }
 
-export const useMessage = () => {
-  return useContext(MessageContext);
+export const useMessages = () => {
+  return useContext(MessagesContext);
 };

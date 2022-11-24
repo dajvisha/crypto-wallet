@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { Button, Card, Input, Logo, Modal, View } from '../../components/UI';
+import { Button, Card, Input, Logo, View } from '../../components/UI';
 import { useAuth } from '../../contexts/AuthProvider';
 
 import styles from './styles.module.css';
@@ -41,7 +41,6 @@ function Login() {
 
   return (
     <View>
-          <Modal title="New Transfer" />
       <View.Body className={styles['view-body']}>
         <div>
           <Card shadow className={styles['login-card']}>

@@ -4,14 +4,14 @@ import { useNavigate } from 'react-router-dom';
 import { userWallet } from './api';
 
 import { useAuth } from './AuthProvider';
-import { useMessage } from './MessagesProvider';
+import { useMessages } from './MessagesProvider';
 
 const WalletContext = createContext();
 
 export function WalletProvider(props) {
   const [balances, setBalances] = useState({});
   const [transactions, setTransactions] = useState([]);
-  const { addMessage } = useMessage();
+  const { addMessage } = useMessages();
 
   const { token, logout } = useAuth();
   const navigate = useNavigate();

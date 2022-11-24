@@ -3,12 +3,12 @@ import { useIdleTimer } from 'react-idle-timer';
 import { useNavigate } from 'react-router-dom';
 
 import { useAuth } from '../contexts/AuthProvider';
-import { useMessage } from '../contexts/MessagesProvider';
+import { useMessages } from '../contexts/MessagesProvider';
 
 export default function useIdle() {
   const [isIdle, setIsIdle] = useState();
   const { logout } = useAuth();
-  const { addMessage } = useMessage();
+  const { addMessage } = useMessages();
   const navigate = useNavigate();
   
   const onIdle = () => {

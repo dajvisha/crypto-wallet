@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 
-import { useMessage } from '../../contexts/MessagesProvider';
+import { useMessages } from '../../contexts/MessagesProvider';
 
 import { Message } from '../../components/UI';
 
 function MessagesView() {
-  const { message, removeMessage } = useMessage();
+  const { message, removeMessage } = useMessages();
 
   useEffect(() => {
     if (message) {
